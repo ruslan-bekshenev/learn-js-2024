@@ -17,22 +17,6 @@ var twoSum = function(nums, target) {
     }
 
     return []
-    // const result = []
-    // for (let i = 0; i < nums.length; i++) {
-    //     let sum = target - nums[i]
-    //     let second = nums.findIndex(item => sum === item)
-
-    //     if (nums[i] + nums[second] !== target) {
-    //         continue
-    //     }
-
-    //     if (second > -1 && i !== second) {
-    //         result.push(i)
-    //         result.push(second)
-    //         break;
-    //     }
-    // }
-    // return result
 };
 
 

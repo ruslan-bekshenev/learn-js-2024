@@ -61,3 +61,30 @@ var isValid2 = function(s) {
 
     return !stack.length
 };
+
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isValid3 = function(s) {
+    let stack = []
+    const map = {
+        '{' : '}',
+        '(' : ')',
+        '[' : ']'
+    }
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === '(' || s[i] === '{' || s[i] === '[') {
+            stack.push(map[s[i]])
+        } else {
+            const last = stack.pop()
+            if (last !== s[i]) {
+                return false
+            }
+        }
+    }
+
+    return stack.length === 0
+};
